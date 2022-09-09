@@ -1,6 +1,5 @@
 //USE DOTENV TO ACCESS DATABASE
 require('dotenv').config();
-
 //CALL FOR THE USE OF NPM PACKAGE SEQUELIZE
 const Sequelize = require('sequelize');
 
