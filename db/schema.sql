@@ -1,5 +1,0 @@
--- RESET DATABASE
-DROP DATABASE IF EXISTS shoppy_elle_db;
-
--- CREATE DATABASE
-CREATE DATABASE shoppy_elle_db;
