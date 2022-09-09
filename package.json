@@ -1,0 +1,19 @@
+{
+  "name": "elle_ecommerce_api",
+  "version": "1.0.0",
+  "description": "E-commerce API for Elle shopping website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aditore/elle_ecommerce_api.git"
+  },
+  "author": "aditore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aditore/elle_ecommerce_api/issues"
+  },
+  "homepage": "https://github.com/aditore/elle_ecommerce_api#readme"
+}
