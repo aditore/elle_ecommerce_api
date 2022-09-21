@@ -1,0 +1,7 @@
+//PUT CONTROLLER FUNCTIONS IN INDEX TO MAKE EASIER TO CALL FOR ROUTES
+const { } = require('./api');
+
+//EXPORT ALL CONTROLLERS
+module.exports = {
+    
+}
