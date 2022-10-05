@@ -4,4 +4,16 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 //EXPORT FUNCTIONS FOR ROUTES
 module.exports = {
     
+    /* INCOMPLETE
+    -FIND ALL PRODUCTS, INCLUDE CATEGORY AND TAG
+
+    -FIND ONE PRODUCT BY ID, INCLUDE CATEGORY AND TAG
+
+    -CREATE NEW PRODUCT
+
+    -UPDATE PRODUCT BY ID
+
+    -DELETE PRODUCT BY ID
+    */
+
 }
