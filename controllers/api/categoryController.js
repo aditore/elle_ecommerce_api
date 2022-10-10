@@ -19,13 +19,26 @@ module.exports = {
             //ISSUE RESPONSE
             res.status(400).json(err);
         }
-    }
+    },
 
     /* INCOMPLETE
     -FIND ONE CATEGORY BY ID VALUE, INCLUDE PRODUCTS
-
-    -CREATE NEW CATGEORY
-
+    */
+    //CREATE NEW CATGEORY
+    async createNewCategory(req, res) {
+        try {
+            //VARIABLE TO HOLD CREATED CATEGORY
+            const newCategory = await Category.create({
+                ...req.body
+            });
+            //INTENDED RESPONSE
+            res.status(200).json(newCategory);
+        } catch (err) {
+            //ISSUE RESPONSE
+            res.status(400).json(err);
+        }
+    }
+    /*
     -UPDATE CATEGORY BY ID VALUE
 
     -DELETE CATEGORY BY ID VALUE
