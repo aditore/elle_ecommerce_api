@@ -4,7 +4,7 @@ const { Category, Product } = require('../../models');
 //EXPORT FUNCTIONS FOR ROUTES
 module.exports = {
     //GET ALL CATEGORIES
-    async getALLCategories(req, res) {
+    async getAllCategories(req, res) {
         try {
             const allCategories = await Category.findAll({
                 //INCLUDE PRODUCTS

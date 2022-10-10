@@ -1,6 +1,8 @@
 /*FILE CONNECTION*/
 //CALL EXPRESS WEB FRAMEWORK
 const express = require('express');
+//DECLARE ROUTES
+const routes = require('./routes');
 //IMPORT MYSQL CONNECTION
 const sequelize = require('./config/connection');
 
@@ -15,6 +17,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 //PARSE URLENCODED BODIES THAT MATCH Content-Type
 app.use(express.urlencoded({ extended: true }));
+//DECLARE USAGE OF ROUTES
+app.use(routes);
 
 
 /*SERVER*/
