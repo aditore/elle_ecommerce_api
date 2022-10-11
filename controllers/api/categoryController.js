@@ -20,10 +20,26 @@ module.exports = {
             res.status(400).json(err);
         }
     },
-
-    /* INCOMPLETE
-    -FIND ONE CATEGORY BY ID VALUE, INCLUDE PRODUCTS
-    */
+    //FIND ONE CATEGORY BY ID VALUE, INCLUDE PRODUCTS
+    async findSingleCategory(req, res) {
+        try {
+            //VARIABLE TO HOLD SINGLE CATEGORY
+            const singleCategory = await Category.findByPk(
+                req.params.id,
+                {
+                    include: {
+                        model: Product,
+                        attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+                    }
+                }
+            );
+            //INTENDED RESPONSE
+            res.status(200).json(singleCategory);
+        } catch (err) {
+            //ISSUE RESPONSE
+            res.status(400).json(err);
+        }
+    },
     //CREATE NEW CATGEORY
     async createNewCategory(req, res) {
         try {
@@ -38,7 +54,7 @@ module.exports = {
             res.status(400).json(err);
         }
     }
-    /*
+    /* INCOMPLETE
     -UPDATE CATEGORY BY ID VALUE
 
     -DELETE CATEGORY BY ID VALUE

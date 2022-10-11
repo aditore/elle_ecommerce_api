@@ -1,6 +1,7 @@
 //PUT CONTROLLER FUNCTIONS IN INDEX TO MAKE EASIER TO CALL FOR ROUTES
 const {
-    getAllCategories, 
+    getAllCategories,
+    findSingleCategory, 
     createNewCategory 
 } = require('./categoryController');
 const { }= require('./productController');
@@ -11,5 +12,6 @@ const { } = require('./tagController');
 module.exports = {
     //CATEGORY CONTROLLER
     getAllCategories,
+    findSingleCategory,
     createNewCategory
 }

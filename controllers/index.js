@@ -1,7 +1,8 @@
 //PUT CONTROLLER FUNCTIONS IN INDEX TO MAKE EASIER TO CALL FOR ROUTES
 const {
     //CATEGORY 
-    getAllCategories, 
+    getAllCategories,
+    findSingleCategory, 
     createNewCategory 
 } = require('./api');
 
@@ -9,5 +10,6 @@ const {
 module.exports = {
     //CATEGORY CONTROLLER
     getAllCategories,
+    findSingleCategory,
     createNewCategory
 }
