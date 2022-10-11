@@ -3,7 +3,9 @@ const {
     //CATEGORY 
     getAllCategories,
     findSingleCategory, 
-    createNewCategory 
+    createNewCategory,
+    updateCategory,
+    deleteCategory 
 } = require('./api');
 
 //EXPORT ALL CONTROLLERS
@@ -11,5 +13,7 @@ module.exports = {
     //CATEGORY CONTROLLER
     getAllCategories,
     findSingleCategory,
-    createNewCategory
+    createNewCategory,
+    updateCategory,
+    deleteCategory
 }

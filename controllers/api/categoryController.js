@@ -53,11 +53,44 @@ module.exports = {
             //ISSUE RESPONSE
             res.status(400).json(err);
         }
+    },
+    //UPDATE CATEGORY BY ID VALUE
+    async updateCategory(req, res) {
+        try {
+            //VARIABLE TO HOLD CATEGORY TO BE UPDATED
+            const updateCategory = await Category.update(
+                //DEFINE THE REQUEST
+                {
+                    ...req.body
+                },
+                //MATCH IT WHERE ID MATCHES
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                }
+                );
+                //INTENDED RESPONSE
+                res.status(200).json(updateCategory);
+        } catch (err) {
+            //ISSUE RESPONSE
+            res.status(400).json(err);
+        }
+    },
+    //DELETE CATEGORY BY ID VALUE
+    async deleteCategory(req, res) {
+        try {
+            //VARIABLE TO HOLD CATEGORY TO BE DELETED
+            const deleteCategory = await Category.destroy({
+                where: {
+                    id: req.params.id
+                }
+            });
+            //INTENDED RESPONSE
+            res.status(200).json(deleteCategory);
+        } catch (err) {
+            //ISSUE RESPONSE
+            res.status(400).json(err);
+        }
     }
-    /* INCOMPLETE
-    -UPDATE CATEGORY BY ID VALUE
-
-    -DELETE CATEGORY BY ID VALUE
-    */
-
 }

@@ -2,7 +2,9 @@
 const {
     getAllCategories,
     findSingleCategory, 
-    createNewCategory 
+    createNewCategory,
+    updateCategory,
+    deleteCategory 
 } = require('./categoryController');
 const { }= require('./productController');
 const { } = require('./tagController');
@@ -13,5 +15,7 @@ module.exports = {
     //CATEGORY CONTROLLER
     getAllCategories,
     findSingleCategory,
-    createNewCategory
+    createNewCategory,
+    updateCategory,
+    deleteCategory
 }

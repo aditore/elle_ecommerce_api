@@ -5,12 +5,14 @@ const router = require('express').Router();
 const {
     getAllCategories,
     findSingleCategory,
-    createNewCategory
+    createNewCategory,
+    updateCategory,
+    deleteCategory
 } = require('../../controllers');
 
 //URL FOR CATEGORY
 router.route('/').get(getAllCategories).post(createNewCategory);
 //URL FOR CATEGORY WITH ID
-router.route('/:id').get(findSingleCategory);
+router.route('/:id').get(findSingleCategory).put(updateCategory).delete(deleteCategory);
 
 module.exports = router;
